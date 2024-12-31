@@ -1,0 +1,41 @@
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.userosscache
+*.suo
+
+# Ignore Visual Studio Code workspace settings file
+.vscode/*
+
+# Ignore directories and files related to NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+.nuget/
+packages/
+
+# Ignore logs, database, and OS files
+*.log
+*.sql
+*.sqlite
+*.pdb
+
+# Ignore temporary files and folders
+*.tmp
+*.temp
+*.DS_Store
+
+# Ignore crash reports
+crashdump/
+
+# Ignore published websites
+.publish/
+
+# Ignore assembly info
+AssemblyInfo.cs
