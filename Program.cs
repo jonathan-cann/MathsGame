@@ -4,7 +4,7 @@ Requirements:
 - A basic maths game containing the four operations.
 - The division should result in integers only and dividents should be between 0 and 100.
 - Users should be presented with a menu to choose an option.
-- Previous games should be recorded ina  list and there should be an option in the menu to visualise the history of the game.
+- Previous games should be recorded in a list and there should be an option in the menu to visualise the history of the game.
 - The results are deleted once the game is closed.
 
 */
@@ -92,6 +92,27 @@ internal class Program
 
                 case "5":
                     {
+                        if (gameResults.Count == 0)
+                        {
+                            Console.WriteLine("\nPlay some games to see the game history!");
+                        }
+                        else
+                        {
+                            int correctCount = 0;
+
+                            Console.WriteLine("\nGame History:");
+
+                            foreach (var gameResult in gameResults)
+                            {
+                                gameResult.DisplayInfo();
+                                if (gameResult.Evaluation == "Correct")
+                                {
+                                    correctCount++;
+                                }
+                            }
+                            
+                            Console.WriteLine($"\nYou've got {correctCount} out of {gameResults.Count} right so far!");
+                        }
                         break;
                     }
 
