@@ -77,16 +77,28 @@ internal class Program
 
                 case "2":
                     {
+                        Game newGame = new();
+                        string[] gameResult = newGame.SubtractionGame();
+                        GameResult newGameResult = new GameResult(gameResults.Count + 1, gameResult[0], gameResult[1], gameResult[2]);
+                        gameResults.Add(newGameResult);
                         break;
                     }
 
                 case "3":
                     {
+                        Game newGame = new();
+                        string[] gameResult = newGame.MultiplicationGame();
+                        GameResult newGameResult = new GameResult(gameResults.Count + 1, gameResult[0], gameResult[1], gameResult[2]);
+                        gameResults.Add(newGameResult);
                         break;
                     }
 
                 case "4":
                     {
+                        Game newGame = new();
+                        string[] gameResult = newGame.DivisionGame();
+                        GameResult newGameResult = new GameResult(gameResults.Count + 1, gameResult[0], gameResult[1], gameResult[2]);
+                        gameResults.Add(newGameResult);
                         break;
                     }
 
